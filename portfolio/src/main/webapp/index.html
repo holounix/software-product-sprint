@@ -2,18 +2,74 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <title>Edgar's Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </head>
   <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
+    <div class= "row">
+        <div class= "col-md-4">
+        </div>
+        <div class= "col-md-4">
+            <h1>My Portfolio</h1>
+        </div>
+        <div class= "col-md-4">
+
+        </div>
+    </div>
+    <div class= "row">
+        <div class = "col-md-6">
+            <h2> About Me</h2>
+        </div>
+        <div class = "col-md-6">
+        </div>
+    </div>
+    <div class= "row">
+        <div class = "col-sm-6">
+            <div id= "rcorners1">
+            <p>My name is Edgar Granados-Perez and I am from Memphis, Tennessee. Although I was not born in the volunteer state I consider it my home.
+                My family immigrated here from Hidalgo, Mexico when I was three. Being an immigrant has taught me many things but one of the most treasured lessons I have learned has been
+                to always be open to learn. That is what brought me to computer science. Growing up I didn't come across many oppurtunities as my peers, one of the was having internet at home.
+                My older brother was given a PC for his birthday and used to doodle on MS Paint all the time. Me being the annoying little brother that I was. I constantly asked him to let me use
+                use the computer, which my brother strongly declined to do so. I would say him saying "no" was probably one of the best things to happen to me. It lead to me to research how a computer
+                functions and what other purposes it had other than doodling. I learned about networking to solve my internet issue and learned about google docs when it released to public. A tool that
+                helped me do countless of papers for free. Ironically enough I never figured how to use paint on windows vista to doodle, but honestly that is a small price to pay for an immense amount of 
+                knowledge.  
+            </p>
+            </div>
+        </div>
+        <div class = "col-sm-6">
+            <img src="/images/basil.jpg" class="rounded" width="350" height="450">
+        </div>
+    </div>
+    <div class= "row">
+        <div class = "col-sm-6">
+            <h2>Projects</h2>
+            <div id= "rcorners1">
+            <p>I have only done two personal projects. Those being a tax write off program which was written in Python
+                and the other was a bot used to buy the RTX 3080 cards. Sadly I do not upload my creations to gitHub.
+            </p>
+            </div>
+        </div>
+        <div class = "col-sm-6">
+            <h2>Connect with me </h2>
+            <div class= "row">
+                <div class = "col-1"></div>
+                <div class = "col-1"></div>
+                <div class = "col-3">
+                    <a href = "https://www.linkedin.com/in/edgar-granados-perez/">
+                    <img src="/images/linkedin.png"  style="width:150px;height:90px;">
+                    </a>
+                </div>
+                <div class = "col-2">
+                    <a href = "https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=zW9_bVZsQfqOX3E3Ost4Rg">
+                    <img src="/images/spotify.png"  style="width:90px;height:90px;">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
   </body>
 </html>
