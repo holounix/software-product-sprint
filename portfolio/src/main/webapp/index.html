@@ -77,5 +77,48 @@
             </div>
         </div>
     </div>
+    <div class = "row">
+    <div class = "col-6"></div>
+    <div class = "col-6"></div>
+    </div>
+    <div class= "row">
+        <div class = "col-6">
+            <h2>Servlets</h2>
+            <div class="row">
+                <div id="col-3">
+                    <p>Click here to see a random number:</p>
+                </div>
+                <div id= "col-2">
+                    <button class="button" onclick="showRandomNum()">
+                     Num
+                    </button>
+                </div>
+                <div id="col-2">
+                    <p id="randomNum-container"></p>
+                </div>
+            </div>                
+        </div>
+        <div class = "col-6">
+            <h2>Contact Me</h2>
+            <div class = "row">
+                <div class = "col-5">
+                </div>
+                <div class = "col-2">
+                    <form action="/form-handler" method="POST">
+                    <p>Name:</p>
+                    <textarea name="name-input"></textarea>
+                     <br/>
+                    <p>Email:</p>
+                    <textarea name="email-input"></textarea>
+                     <br/>
+                    <p>Message:</p>
+                    <textarea name="message-input"></textarea>
+                    <br/>
+                    <input type="submit" />
+                    </form> 
+                </div>
+            </div>
+        </div>    
+    </div>
   </body>
 </html>

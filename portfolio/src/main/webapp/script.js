@@ -33,3 +33,12 @@ async function showServerTime() {
   const dateContainer = document.getElementById('date-container');
   dateContainer.innerText = textFromResponse;
 }
+async function showRandomNum(){
+    const responseFromServer = await fetch("/randomNum");
+    const textFromReponse = await responseFromServer.text();
+    const index = Math.floor(Math.random() * 3);
+    const fetchContainer = document.getElementById("randomNum-container");
+    const fetchTitle = document.getElementById("randomNumText");
+    factsContainer.innerText = '';
+    factsContainer.innerText = facts[index];
+}
