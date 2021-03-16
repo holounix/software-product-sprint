@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script>
+      function requestTranslation() {
+        const text = document.getElementById('text').value;
+        const languageCode = document.getElementById('language').value;
+
+        const resultContainer = document.getElementById('result');
+        resultContainer.innerText = 'Loading...';
+
+        const params = new URLSearchParams();
+        params.append('text', text);
+        params.append('languageCode', languageCode);
+
+        fetch('/translate', {
+          method: 'POST',
+          body: params
+        }).then(response => response.text())
+        .then((translatedMessage) => {
+          resultContainer.innerText = translatedMessage;
+        });
+      }
+    </script>
   </head>
   <body>
     <div class= "row">
@@ -78,8 +99,27 @@
         </div>
     </div>
     <div class = "row">
-    <div class = "col-6"></div>
-    <div class = "col-6"></div>
+    <div class = "col-6">
+        <h1>Translation</h1>
+        <p>Type a message and select a language, then click submit to translate it.</p>
+
+        <textarea id="text"></textarea>
+
+        <select id="language">
+        <option value="es">English</option>
+        <option value="zh">Chinese</option>
+        <option value="es">Spanish</option>
+        <option value="hi">Hindi</option>
+        <option value="ar">Arabic</option>
+        </select>
+
+        <button onclick="requestTranslation();">Translate</button>
+
+        <hr/>
+    </div>
+    <div class = "col-6">
+        <div id="result"></div>
+    </div>
     </div>
     <div class= "row">
         <div class = "col-6">
